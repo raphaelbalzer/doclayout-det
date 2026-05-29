@@ -11,3 +11,4 @@ wheels/
 
 # Data
 .data
+.coco_labels_full

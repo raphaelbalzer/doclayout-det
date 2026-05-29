@@ -6,7 +6,7 @@ import random
 
 # PFADE ANPASSEN
 ZIP_PATH = "/mnt/c/Users/rapha/Documents/projects/doclayout-detection/DocLayNet_core.zip"
-EXTRACTED_COCO_DIR = ".data/COCO"
+EXTRACTED_COCO_DIR = ".coco_labels_full"
 OUTPUT_DIR = ".data/images"
 
 TARGET_CATEGORIES = ["scientific_articles"]
@@ -77,8 +77,8 @@ with zipfile.ZipFile(ZIP_PATH, 'r') as archive:
         }
         
         # Speicher das kleine, feine JSON direkt im jeweiligen Split-Ordner ab
-        os.makedirs(f".data/labels", exist_ok=True)
-        with open(f".data/labels/labels_coco_{config['yolo_split']}.json", "w") as out_json:
+        os.makedirs(f".data/labels_coco", exist_ok=True)
+        with open(f".data/labels_coco/labels_coco_{config['yolo_split']}.json", "w") as out_json:
             json.dump(subset_coco, out_json)
 
 print(f"\nFertig! Bilder extrahiert und perfekt gekürzte JSONs erstellt unter '{OUTPUT_DIR}'")
