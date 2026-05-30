@@ -54,7 +54,7 @@ with zipfile.ZipFile(ZIP_PATH, 'r') as archive:
                 zip_img_path = f"PNG/{os.path.basename(file_name)}"
                 img_data = archive.read(zip_img_path)
                 
-                output_path = f"{OUTPUT_DIR}/{config['yolo_split']}/{img_id}.png"
+                output_path = f"{OUTPUT_DIR}/{config['yolo_split']}/{file_name}"
                 with open(output_path, "wb") as img_f:
                     img_f.write(img_data)
                 
