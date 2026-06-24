@@ -11,7 +11,9 @@ wheels/
 
 # Data
 .data
+.data_multi_cat
 .coco_labels_full
+*.zip
 
 # Training
 runs/
