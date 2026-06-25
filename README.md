@@ -3,10 +3,9 @@
 ## Repository Structure
 
 - `notebooks/`: Contains Jupyter notebooks for training and data validation.
-- `models/`: Stores the trained model weights.
 - `results/`: Stores the results of model evaluation.
 - `plots/`: Contains generated plots for performance metrics.
-- `data_extraction/`: Script for extracting the datasets from the original source.
+- `data_extraction.py`: Script for extracting the datasets from the original source.
 
 ## Data Preparation
 
