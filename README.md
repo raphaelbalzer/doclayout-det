@@ -13,7 +13,7 @@ In theory, the DocLayNet dataset can be accessed via the [HuggingFace Hub](https
 
 ## Model Training
 
-For model training and evaluation, the `colab-train.ipynb` notebook is provided. It is designed to be run in Google Colab, which is why the notebook is set up to download the dataset in zip format from Google Drive. It is designed to load one dataset at a time by switching out the dataset path. If you want to run the notebook locally, you will need to modify the data loading section to point to your local dataset path. For running the notebook in Colab, uploading the dataset zip files to your personal Google Drive and adjusting the paths in the notebook is necessary.
+For model training and evaluation, the `train_evaluate.ipynb` notebook is provided. It is designed to be run in Google Colab, which is why the notebook is set up to download the dataset in zip format from Google Drive. It is designed to load one dataset at a time by switching out the dataset path. If you want to run the notebook locally, you will need to modify the data loading section to point to your local dataset path. For running the notebook in Colab, uploading the dataset zip files to your personal Google Drive and adjusting the paths in the notebook is necessary.
 
 ## Data Validation
 
