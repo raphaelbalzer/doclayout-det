@@ -9,7 +9,7 @@
 
 ## Data Preparation
 
-In theory, the DocLayNet dataset can be accessed via the [HuggingFace Hub](https://huggingface.co/datasets/docling-project/DocLayNet). However, when attempting to download/stream the dataset using the `datasets` library, an error occurs due to HuggingFace no longer supporting custom dataset loading scripts. Therefore, the dataset must be downloaded manually from the official [DocLayNet Github Repository](https://github.com/DS4SD/DocLayNet) and the path to the dataset must be specified in the `data_extractor.py` script. The script will then use the predefined train/validation/test splits to extract the subsets.
+In theory, the DocLayNet dataset can be accessed via the [HuggingFace Hub](https://huggingface.co/datasets/docling-project/DocLayNet). However, when attempting to download/stream the dataset using the `datasets` library, an error occurs due to HuggingFace no longer supporting custom dataset loading scripts. Therefore, the dataset must be downloaded manually from the official [DocLayNet Github Repository](https://github.com/DS4SD/DocLayNet) and the path to the dataset must be specified in the `data_extractor.py` script. The script will then use the predefined train/validation/test splits to extract the subsets. For reproducability, the extracted datasets are provided in zip format in the following Google Drive folder: [DocLayNet Subsets](https://drive.google.com/drive/folders/1ctvrQwZ049NzQs0W3zVmO3rpAYFHvWNH?usp=sharing).
 
 ## Model Training
 
