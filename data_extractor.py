@@ -60,8 +60,8 @@ with zipfile.ZipFile(ZIP_PATH, 'r') as archive:
         # create output directory for images
         os.makedirs(f"{OUTPUT_DIR}/{config['yolo_split']}", exist_ok=True)
         
-        # 3. Bilder extrahieren
-        print(f"Extrahiere insgesamt {len(selected_images)} Bilder...")
+        # Extract images from the zip archive and save them to the output directory
+        print(f"Extracting a total of {len(selected_images)} images...")
         actual_saved_images = []
         
         for img_info in tqdm(selected_images):
@@ -81,8 +81,8 @@ with zipfile.ZipFile(ZIP_PATH, 'r') as archive:
                 
         final_image_ids = {img['id'] for img in actual_saved_images}
         
-        # 4. COCO-JSON auf die extrahierten Bilder und deren Annotations kürzen
-        print("Erstelle gekürztes COCO-JSON...")
+        # Reduce the COCO JSON to only include the selected images and their annotations
+        print("Creating reduced COCO-JSON...")
         filtered_annotations = [ann for ann in coco_data['annotations'] if ann['image_id'] in final_image_ids]
         
         subset_coco = {
@@ -95,4 +95,4 @@ with zipfile.ZipFile(ZIP_PATH, 'r') as archive:
         with open(f".data/labels_coco_{path_suffix}/labels_coco_{config['yolo_split']}.json", "w") as out_json:
             json.dump(subset_coco, out_json)
 
-print(f"\nFertig! Daten erfolgreich partitioniert unter '{OUTPUT_DIR}' und '.data/labels_coco_{path_suffix}/'")
+print(f"\nFinished! Data successfully partitioned under '{OUTPUT_DIR}' and '.data/labels_coco_{path_suffix}/'")
